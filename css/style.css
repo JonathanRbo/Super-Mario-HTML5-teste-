@@ -1,0 +1,141 @@
+/* ================================================
+   SUPER MARIO HTML5 - Styles
+   ================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Courier New', monospace;
+  touch-action: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#game-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#game-canvas {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  background: #6B8CFF;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* ==================== TOUCH CONTROLS ==================== */
+
+#touch-controls {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 12px 12px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.touch-left,
+.touch-right {
+  display: flex;
+  gap: 8px;
+  pointer-events: auto;
+}
+
+.touch-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.8);
+  font-size: 1.4rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.1s;
+}
+
+.touch-btn:active,
+.touch-btn.pressed {
+  background: rgba(255,255,255,0.35);
+  border-color: rgba(255,255,255,0.7);
+}
+
+.touch-a-btn {
+  width: 70px;
+  height: 70px;
+  font-size: 1.5rem;
+  background: rgba(233, 69, 96, 0.3);
+  border-color: rgba(233, 69, 96, 0.6);
+}
+
+.touch-a-btn:active,
+.touch-a-btn.pressed {
+  background: rgba(233, 69, 96, 0.5);
+}
+
+.touch-b-btn {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 20px;
+  background: rgba(46, 213, 115, 0.3);
+  border-color: rgba(46, 213, 115, 0.6);
+}
+
+.touch-b-btn:active,
+.touch-b-btn.pressed {
+  background: rgba(46, 213, 115, 0.5);
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 600px) {
+  .touch-btn {
+    width: 52px;
+    height: 52px;
+    font-size: 1.2rem;
+  }
+  .touch-a-btn {
+    width: 62px;
+    height: 62px;
+  }
+  .touch-b-btn {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #game-canvas {
+    max-width: 960px;
+    max-height: 640px;
+  }
+}
