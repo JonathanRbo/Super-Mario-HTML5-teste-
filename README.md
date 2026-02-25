@@ -1,4 +1,4 @@
-# 🍄 Super Mario HTML5
+# 🍄 Super Mario (BETA)
 
 Jogo de plataforma estilo Mario clássico, feito 100% com HTML5 Canvas + JavaScript vanilla. Sem dependências externas.
 
